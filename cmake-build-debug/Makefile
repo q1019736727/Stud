@@ -169,6 +169,33 @@ mDomain.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/mDomain.c.s
 .PHONY : mDomain.c.s
 
+mFileRW.o: mFileRW.c.o
+
+.PHONY : mFileRW.o
+
+# target to build an object file
+mFileRW.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/mFileRW.c.o
+.PHONY : mFileRW.c.o
+
+mFileRW.i: mFileRW.c.i
+
+.PHONY : mFileRW.i
+
+# target to preprocess a source file
+mFileRW.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/mFileRW.c.i
+.PHONY : mFileRW.c.i
+
+mFileRW.s: mFileRW.c.s
+
+.PHONY : mFileRW.s
+
+# target to generate assembly for a file
+mFileRW.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/mFileRW.c.s
+.PHONY : mFileRW.c.s
+
 mStruct.o: mStruct.c.o
 
 .PHONY : mStruct.o
@@ -289,6 +316,9 @@ help:
 	@echo "... mDomain.o"
 	@echo "... mDomain.i"
 	@echo "... mDomain.s"
+	@echo "... mFileRW.o"
+	@echo "... mFileRW.i"
+	@echo "... mFileRW.s"
 	@echo "... mStruct.o"
 	@echo "... mStruct.i"
 	@echo "... mStruct.s"

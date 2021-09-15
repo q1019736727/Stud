@@ -6,6 +6,7 @@ extern void myout();
 extern void mUnion();
 extern void myStructF();
 extern void mDomain();
+extern void mFileRW();
 int maxValue(int value1, int value2);
 void swap(int *x, int *y)
 {
@@ -62,8 +63,10 @@ int main() {
 //    myout();
 //    myStructF();
 //    mUnion();
-    mDomain();
+//    mDomain();
+    mFileRW();
     return 0;
+
 }
 
 int maxValue(int value1, int value2){

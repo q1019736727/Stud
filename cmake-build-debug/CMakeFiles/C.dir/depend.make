@@ -3,6 +3,8 @@
 
 CMakeFiles/C.dir/mDomain.c.o: ../mDomain.c
 
+CMakeFiles/C.dir/mFileRW.c.o: ../mFileRW.c
+
 CMakeFiles/C.dir/mStruct.c.o: ../mStruct.c
 
 CMakeFiles/C.dir/mUnion.c.o: ../mUnion.c

@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "C"
   "C.pdb"
   "CMakeFiles/C.dir/mDomain.c.o"
+  "CMakeFiles/C.dir/mFileRW.c.o"
   "CMakeFiles/C.dir/mStruct.c.o"
   "CMakeFiles/C.dir/mUnion.c.o"
   "CMakeFiles/C.dir/main.c.o"
