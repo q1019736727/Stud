@@ -1,0 +1,10 @@
+.DS_Store
+
+# for IDEA
+*/build/*
+.idea/*
+*.iml
+/out/*
+
+# C extensions
+*.so
