@@ -3,7 +3,9 @@
 extern int x;
 extern int y;
 extern void myout();
+extern void mUnion();
 extern void myStructF();
+extern void mDomain();
 int maxValue(int value1, int value2);
 void swap(int *x, int *y)
 {
@@ -24,6 +26,7 @@ int main() {
 
     char a[9] = "asdadasd";
     unsigned int length = strlen(a);
+    printf("*(a+2) = %c, a[2] = %c\n",*(a+2),a[2]);
     printf("%d\n",length);
     printf("x + y = %d\n",x+y);
     printf("char size: %lu\n", sizeof(char));
@@ -57,7 +60,9 @@ int main() {
     printf("max value = %d\n",value);
 
 //    myout();
-    myStructF();
+//    myStructF();
+//    mUnion();
+    mDomain();
     return 0;
 }
 

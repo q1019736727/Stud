@@ -78,7 +78,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/zhaoenjia/Desktop/C/mDomain.c">
+			<Option target="C"/>
+		</Unit>
 		<Unit filename="/Users/zhaoenjia/Desktop/C/mStruct.c">
+			<Option target="C"/>
+		</Unit>
+		<Unit filename="/Users/zhaoenjia/Desktop/C/mUnion.c">
 			<Option target="C"/>
 		</Unit>
 		<Unit filename="/Users/zhaoenjia/Desktop/C/main.c">

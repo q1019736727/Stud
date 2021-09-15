@@ -142,6 +142,33 @@ C/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/build
 .PHONY : C/fast
 
+mDomain.o: mDomain.c.o
+
+.PHONY : mDomain.o
+
+# target to build an object file
+mDomain.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/mDomain.c.o
+.PHONY : mDomain.c.o
+
+mDomain.i: mDomain.c.i
+
+.PHONY : mDomain.i
+
+# target to preprocess a source file
+mDomain.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/mDomain.c.i
+.PHONY : mDomain.c.i
+
+mDomain.s: mDomain.c.s
+
+.PHONY : mDomain.s
+
+# target to generate assembly for a file
+mDomain.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/mDomain.c.s
+.PHONY : mDomain.c.s
+
 mStruct.o: mStruct.c.o
 
 .PHONY : mStruct.o
@@ -168,6 +195,33 @@ mStruct.s: mStruct.c.s
 mStruct.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/mStruct.c.s
 .PHONY : mStruct.c.s
+
+mUnion.o: mUnion.c.o
+
+.PHONY : mUnion.o
+
+# target to build an object file
+mUnion.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/mUnion.c.o
+.PHONY : mUnion.c.o
+
+mUnion.i: mUnion.c.i
+
+.PHONY : mUnion.i
+
+# target to preprocess a source file
+mUnion.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/mUnion.c.i
+.PHONY : mUnion.c.i
+
+mUnion.s: mUnion.c.s
+
+.PHONY : mUnion.s
+
+# target to generate assembly for a file
+mUnion.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/mUnion.c.s
+.PHONY : mUnion.c.s
 
 main.o: main.c.o
 
@@ -232,9 +286,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... C"
+	@echo "... mDomain.o"
+	@echo "... mDomain.i"
+	@echo "... mDomain.s"
 	@echo "... mStruct.o"
 	@echo "... mStruct.i"
 	@echo "... mStruct.s"
+	@echo "... mUnion.o"
+	@echo "... mUnion.i"
+	@echo "... mUnion.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

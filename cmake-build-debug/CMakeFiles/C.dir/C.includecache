@@ -6,11 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/zhaoenjia/Desktop/C/mStruct.c
+/Users/zhaoenjia/Desktop/C/mDomain.c
 stdio.h
--
-string.h
--
-stdlib.h
 -
 

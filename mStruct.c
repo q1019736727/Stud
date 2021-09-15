@@ -28,7 +28,7 @@ struct Stu{
     float score;  //成绩
 } stu1 = { "Tom", 12, 18, 'A', 136.5 };
 
-void average(struct Stu * sts, int count);
+float average(struct Stu * sts, int count);
 
 void myStructF(){
 
@@ -60,16 +60,25 @@ void myStructF(){
     struct Stu stus[] = {
         { "Tom", 12, 18, 'A', 134 },
         { "Jack", 13, 18, 'B', 129 },
-        { "Rose", 16, 18, 'A', 119 },
+        { "Rose", 16, 18, 'A', 119.5 },
         { "Tony", 15, 18, 'A', 108 },
         { "Copy", 15, 18, 'A', 88 }
     };
+
     int length = sizeof(stus)/ sizeof(struct Stu);
-    average(stus,length);
+    float ave = average(stus,length);
+    printf("ave score = %0.2f\n",ave);
 }
 
-void average(struct Stu * sts, int count)
+float average(struct Stu * sts, int count)
 {
+    float sum = 0;
+    for (int i = 0; i < count; i++) {
+        printf("score = %0.2f\n",sts[i].score); //第一种取法
+        sum += (sts+i)->score; //第二种取法
+    }
+    printf("total score = %0.2f\n",sum);
+    return sum/count;
 
 }
 
