@@ -3,12 +3,14 @@
 //
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
+
 void rwF1();
 void rwF2();
 void mFileRW() {
 
     printf("******************* File 文件读写 *************************\n");
-    rwF1();
+//    rwF1();
     rwF2();
 }
 
@@ -60,7 +62,38 @@ void rwF1(){
     fclose(fp);
 }
 
+struct Student {
+    char name[10];
+    int age;
+};
+
 void rwF2() {
 
+    struct Student stu[] = {{"Tom",18},{"jack",19}};
+
+    FILE *fp = NULL;
+
+    fp = fopen("/Users/zhaoenjia/Desktop/CWritefile/students.txt","w");
+    if (fp == NULL) {
+        printf("open file fail");
+        exit(0);
+    }
+    fwrite(stu, sizeof(struct Student), strlen(stu),fp);
+    fclose(fp);
+    printf("write end");
+
+    struct Student stuRead[2];
+    fp = fopen("/Users/zhaoenjia/Desktop/CWritefile/students.txt","r");
+    if (fp == NULL) {
+        printf("open file fail");
+        exit(0);
+    }
+    fread(stuRead, sizeof(struct Student), strlen(stuRead),fp);
+    fclose(fp);
+    printf("Student length = %d\n",strlen(stuRead));
+    for (int i = 0; i < strlen(stuRead)-1; i++) {
+        printf("name = %s\n",stuRead[i].name);
+        printf("age = %d\n",stuRead[i].age);
+    }
 
 }
