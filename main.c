@@ -1,5 +1,9 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
+#include <stdarg.h>
+#include <limits.h>
+#include <float.h>
 extern int x;
 extern int y;
 extern void myout();
@@ -7,6 +11,9 @@ extern void mUnion();
 extern void myStructF();
 extern void mDomain();
 extern void mFileRW();
+
+#define SIZE 4
+
 int maxValue(int value1, int value2);
 void swap(int *x, int *y)
 {
@@ -15,7 +22,52 @@ void swap(int *x, int *y)
     *x = *y;      /* 把 y 赋值给 x */
     *y = temp;    /* 把 temp 赋值给 y */
 }
+
+// 回调函数
+void populate_array(int *array, size_t arraySize, int (*getNextValue)(void))
+{
+    for (size_t i=0; i<arraySize; i++)
+        array[i] = getNextValue();
+}
+// 获取随机值
+int getNextRandomValue(void)
+{
+    return rand();
+}
+
+int sumAll(num){
+    if (num == 0){
+        return 0;
+    }
+    return num + sumAll(num-1);
+}
+#define PRAISE "You are an extraordinary being."
+
 int main() {
+    int days[12]={31,28,[4]=31,30,31,[1]=29}; //[4]=31,30,31 从第五位开始赋值 //[1]=29从第二位开始赋值
+    int day;
+    for(day=0;day<12;day++)
+    printf("%2d　 %d\n",day+1,days[day]);
+
+    char mys[5];
+    //如果赋值hello就会报错,虽然mys有5个字节长度,但是默认的\0结束符还要占一个字节
+    strcpy(mys,"hell");
+    printf("mys == %s\n",mys);
+
+    char name = "hello";
+    printf("name.sizeof == %zd\n", sizeof(PRAISE));// == 32  因为结束符\0系统会默认算进去
+
+    printf("long long == %d\n", INTMAX_MAX);
+
+    printf("0+...+100 = %d\n", sumAll(100));
+
+    int myarray[10];
+    /* getNextRandomValue 不能加括号，否则无法编译，因为加上括号之后相当于传入此参数时传入了 int , 而不是函数指针*/
+    populate_array(myarray, 10, getNextRandomValue);
+    for(int i = 0; i < 10; i++) {
+        printf("%d ", myarray[i]);
+    }
+    printf("\n");
 
     int val = 100;
     int *valP = &val;
@@ -65,8 +117,19 @@ int main() {
 //    mUnion();
 //    mDomain();
     mFileRW();
-    return 0;
 
+    short dates[SIZE];
+    short * pti;
+    short index;
+    double bills[SIZE];
+    double * ptf;
+    pti = dates;// 把数组地址赋给指针
+    ptf = bills;
+    printf("%23s　%15s\n","short","double");
+    for(index=0;index<SIZE;index++)
+    printf("pointers　+　%d:　%10p　%10p\n",index,pti+index,ptf+index);
+
+    return 0;
 }
 
 int maxValue(int value1, int value2){

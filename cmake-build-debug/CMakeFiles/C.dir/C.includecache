@@ -6,11 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/Users/zhaoenjia/Desktop/C/mFileRW.c
+/Users/zhaoenjia/Desktop/C/main.c
 stdio.h
 -
 string.h
 -
 stdlib.h
+-
+stdarg.h
+-
+limits.h
+-
+float.h
 -
 
