@@ -6,17 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/zhaoenjia/Desktop/C/main.c
+/Users/zhaoenjia/Desktop/C/test.c
 stdio.h
--
-string.h
--
-stdlib.h
--
-stdarg.h
--
-limits.h
--
-float.h
 -
 

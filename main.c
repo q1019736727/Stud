@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include <stdarg.h>
 #include <limits.h>
 #include <float.h>
 extern int x;
@@ -11,8 +10,8 @@ extern void mUnion();
 extern void myStructF();
 extern void mDomain();
 extern void mFileRW();
-
-#define SIZE 4
+extern void Pointer();
+extern void TestFunc();
 
 int maxValue(int value1, int value2);
 void swap(int *x, int *y)
@@ -116,19 +115,9 @@ int main() {
 //    myStructF();
 //    mUnion();
 //    mDomain();
-    mFileRW();
-
-    short dates[SIZE];
-    short * pti;
-    short index;
-    double bills[SIZE];
-    double * ptf;
-    pti = dates;// 把数组地址赋给指针
-    ptf = bills;
-    printf("%23s　%15s\n","short","double");
-    for(index=0;index<SIZE;index++)
-    printf("pointers　+　%d:　%10p　%10p\n",index,pti+index,ptf+index);
-
+//    mFileRW();
+    Pointer();
+    TestFunc();
     return 0;
 }
 

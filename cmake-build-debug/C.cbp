@@ -96,6 +96,12 @@
 		<Unit filename="/Users/zhaoenjia/Desktop/C/out.c">
 			<Option target="C"/>
 		</Unit>
+		<Unit filename="/Users/zhaoenjia/Desktop/C/pointer.c">
+			<Option target="C"/>
+		</Unit>
+		<Unit filename="/Users/zhaoenjia/Desktop/C/test.c">
+			<Option target="C"/>
+		</Unit>
 		<Unit filename="/Users/zhaoenjia/Desktop/C/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

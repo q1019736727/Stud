@@ -13,3 +13,7 @@ CMakeFiles/C.dir/main.c.o: ../main.c
 
 CMakeFiles/C.dir/out.c.o: ../out.c
 
+CMakeFiles/C.dir/pointer.c.o: ../pointer.c
+
+CMakeFiles/C.dir/test.c.o: ../test.c
+

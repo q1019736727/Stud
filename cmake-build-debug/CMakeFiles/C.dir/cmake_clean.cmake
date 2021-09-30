@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/C.dir/mUnion.c.o"
   "CMakeFiles/C.dir/main.c.o"
   "CMakeFiles/C.dir/out.c.o"
+  "CMakeFiles/C.dir/pointer.c.o"
+  "CMakeFiles/C.dir/test.c.o"
 )
 
 # Per-language clean rules from dependency scanning.
